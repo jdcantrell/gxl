@@ -1,0 +1,15 @@
+# The directory containing the source files to parse recusrively
+source: ./sass
+
+# The directory that hologram will build to
+destination: ./docs
+
+# The assets needed to build the docs (includes header.html,
+# footer.html, etc)
+documentation_assets: ./assets
+
+# Any other asset folders that need to be copied to the destination
+# folder
+dependencies:
+  - ./build
+  - ./images

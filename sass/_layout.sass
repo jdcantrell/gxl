@@ -1,0 +1,85 @@
+//
+ /*doc
+ 
+ ---
+ title: Layout
+ name: layout
+ category: basics
+ author: JD
+ ---
+ Sometimes you need a post-y type layout:
+
+ ```html_example
+ <article>
+   <header>
+     <h1>This is an article header</h1>
+     <div class="article-details">
+       <span>A few words about stuff</span><br>
+       <span>October 5th, 2012</span>
+     </div>
+   </header>
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+     vitae lectus enim, nec fringilla orci. Nulla sem augue, pellentesque
+     ut congue eu, pretium nec massa. Cum sociis natoque penatibus et
+     magnis dis parturient montes, nascetur ridiculus mus. Morbi ut erat
+     eget augue feugiat dictum. Vestibulum faucibus fringilla diam, ac
+     mattis massa volutpat vel. Nam vestibulum velit id lectus
+     pellentesque sit amet ultrices eros dictum. Vestibulum sollicitudin,
+     nibh eu ultrices molestie, massa quam aliquam eros, sit amet lacinia
+     purus lorem et dolor. Donec dignissim elit rhoncus lacus ornare
+     tempus. Nam vel felis tortor, vitae eleifend enim. Sed sagittis
+     sapien eu diam cursus mollis. Quisque viverra eleifend facilisis.
+     Donec tincidunt convallis porta. Cras augue arcu, mollis at
+     sollicitudin in, euismod nec diam. Duis at porttitor diam. Class
+     aptent taciti sociosqu ad litora torquent per conubia nostra, per
+     inceptos himenaeos. Cras id ante diam, sed sagittis magna.
+   </p>
+ </article>
+ ```
+ */
+
+body
+  background-color: $backgroundColor
+  padding: 0
+  margin: 0
+
+  >footer
+    text-align: center
+    margin: 6px
+    font-size: .9em
+
+  >header
+    &,a, a:visited, a:hover
+      color: $headerTextColor
+      font-weight: bold
+      font-size: 0.9em
+    background-color: $headerBackgroundColor
+    z-index: 1
+    position: fixed
+    width: 100%
+    top: 0
+    padding: 3px 0 9px 9px
+
+    background-position: bottom
+    background-image: url('/images/header-border.png')
+    background-repeat: repeat-x
+
+    img 
+      position: absolute
+      right: 10px
+      top: 2px
+
+article
+  max-width: 800px
+  width: 70%
+  padding: 5px 50px
+  margin: 20px auto 0 auto
+
+  h1, .article-details
+    text-align: center
+    margin-bottom: 5px
+
+  .details
+    color: $typeLowlight
+
