@@ -1,3 +1,7 @@
 source "http://rubygems.org"
 gem "compass"
+gem "compass-normalize"
+gem "compass-colors"
 gem "hologram"
+gem "guard"
+gem "guard-shell"
