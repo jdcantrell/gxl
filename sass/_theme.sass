@@ -1,0 +1,39 @@
+// This contains the css for the header and footer of the site. These
+ rules are more theme related than reusable css.
+body
+  background-color: $backgroundColor
+  padding: 0
+  margin: 0
+
+  >footer
+    text-align: center
+    margin: 6px
+    font-size: .9em
+
+  >header
+    &,a, a:visited, a:hover
+      color: $headerTextColor
+      font-size: 1.3em
+      text-shadow: rgba(0, 0, 0, .7) 0px 2px 1px 
+
+    a:hover
+      font-weight: normal
+      text-decoration: none
+
+    li
+      text-align: center
+
+    background-color: $headerBackgroundColor
+    z-index: 1
+    position: fixed
+    width: 100%
+    top: 0
+    padding: 5px 0 9px 9px
+
+    +background-image(linear-gradient(top, $springGreen 0%, $springGreen 33%, $seaGreen 34%, $seaGreen 66%, $blueGrey 67%, $blueGrey 100%))
+
+    img 
+      position: absolute
+      right: 10px
+      top: 2px
+
