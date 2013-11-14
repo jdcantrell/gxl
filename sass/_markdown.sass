@@ -1,5 +1,5 @@
 //doc
- 
+
  ---
  title: Markdown
  name: Markdown
@@ -18,10 +18,10 @@
  <h2>This is a sub-heading for another point</h2>
  <div>
    <p>
-     Some times you need to link to something 
+     Some times you need to link to something
      <a href="http://goodrobot.net">neat.</a> or something <a href="http://donotclick.com">new</a>.
      A couple other things you might want to be able to do is <b>emphasize
-     text</b>, <i>italics</i> and <code>code snippets</code>. 
+     text</b>, <i>italics</i> and <code>code snippets</code>.
      Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad
      litora torquent per conubia nostra, per inceptos himenaeos. Nam nec
      ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing
@@ -29,62 +29,67 @@
      Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
      Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu
      magna luctus suscipit. Sed lectus.
-    </p>
+   </p>
 
-    <blockquote>
-      I once said somethings that were really important.
-    </blockquote>
+   <p>
+     Integer euismod lacus luctus magna. Quisque cursus, metus vitae
+     pharetra auctor, sem massa mattis sem, at interdum magna augue eget
+     diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+     posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit
+     dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in
+     ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec,
+     blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus.
+     Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis
+     est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin
+     massa.
+   </p>
 
-    <p>Integer euismod lacus luctus magna. Quisque cursus, metus vitae
-    pharetra auctor, sem massa mattis sem, at interdum magna augue eget
-    diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-    posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit
-    dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in
-    ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec,
-    blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus.
-    Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis
-    est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin
-    massa. </p>
+   <blockquote>
+     I once said somethings that were really important.
+   </blockquote>
 
-    <pre>
-      <code>
+
+   <pre>
+     <code>
  if (pancakes)
    eat()
-      </code>
-    </pre>
+     </code>
+   </pre>
 
-    <p>Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi.
-    Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit
-    amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.
-    Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut
-    orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed
-    pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus
-    elit, fermentum non, convallis id, sagittis at, neque. </p>
+   <p>
+     Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi.
+     Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit
+     amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.
+     Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut
+     orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed
+     pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus
+     elit, fermentum non, convallis id, sagittis at, neque.
+   </p>
 
-    <h3>Lists!</h3>
-    <ul>
-      <li>Unicorns
-      <li>Ogres
-      <li>Dragons
-    </ul>
+   <h3>Lists!</h3>
+   <ul>
+     <li>Unicorns
+     <li>Ogres
+     <li>Dragons
+   </ul>
 
-    <ol>
-      <li>Bilbo
-      <li>Frodo
-      <li>Sam
-    </ol>
+   <ol>
+     <li>Bilbo
+     <li>Frodo
+     <li>Sam
+   </ol>
  </div>
  ```
 
 // setup fonts
-body 
+body
   font-family: "Open Sans", Helvetica, Arial, sans-serif
   font-size: 18px
   font-style: normal
   font-weight: 300
   text-transform: normal
   letter-spacing: normal
-  line-height: 1.45em
+  line-height: 1.6em
 
 h1, h2, h3, .article-details
   font-family: 'Gentium Basic', serif
@@ -121,7 +126,7 @@ i, .italic
   font-style: italic
 
 // code blocks and inline code
-pre, code 
+pre, code
   background-color: $codeBackgroundColor
   border: 1px solid $codeBorderColor
   border-radius: 4px
@@ -134,14 +139,10 @@ pre > code
   background-color: none
   font-size: .9em
 
-// content blocks 
+// content blocks
 p
-  text-indent: 2em
-  margin: 0
+  margin-top: 1em
 
-  &:first-of-type
-    margin-top: 1em
-    text-indent: 0
   &:last-of-type
     margin-bottom: 1em
 
