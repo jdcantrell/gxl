@@ -1,5 +1,5 @@
 //doc
- 
+
  ---
  title: Inline Lists
  name: lists
@@ -21,7 +21,7 @@
   margin: 0
   padding: 0
   list-style: none
-  li 
+  li
     padding: 0
     margin-left: .8em
     display: inline-block
@@ -30,7 +30,7 @@
     margin-left: 0
 
 //doc
- 
+
  ---
  title: Media Block
  name: media_block
@@ -67,3 +67,52 @@
   .imageExt
     float: right
     margin-left: 10px
+
+//doc
+ ---
+ title: Buttons
+ name: buttons
+ category: app
+ ---
+
+ ```html_example
+ <a class="btn">Hi</a>
+ <button class="btn btn-primary">Click me!</button>
+ ```
+.btn
+  border: 1px solid darken($backgroundColor, 30%)
+  background-color: darken($backgroundColor, 10%)
+  border-radius: 4px
+  font-size: 18px
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+  line-height: 1.4em
+  padding: 2px 7px 3px 7px
+  color: $textColor
+  display: inline-block
+  box-shadow: 0 2px 0 0 darken($backgroundColor, 30%)
+
+  &:active
+    padding-top: 1px
+    padding-bottom: 4px
+    box-shadow: 0 1px 0 0 darken($backgroundColor, 30%)
+    margin-bottom: -1px
+
+  &:hover
+    text-decoration: none
+
+
+button.btn
+  padding: 1px 7px 2px 7px
+
+  &:active
+    padding-top: 0px
+    padding-bottom: 3px
+
+.btn-primary
+  border-color: $blue
+  background-color: lighten(desaturate($blue, 30%), 20%)
+  color: #fff
+  box-shadow: 0 2px 0 0 $blue
+
+  &:active
+    box-shadow: 0 1px 0 0 $blue
