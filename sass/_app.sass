@@ -90,12 +90,12 @@
   color: $textColor
   display: inline-block
   box-shadow: 0 2px 0 0 darken($backgroundColor, 30%)
+  cursor: pointer
 
   &:active
-    padding-top: 1px
-    padding-bottom: 4px
+    position: relative
+    top: 1px
     box-shadow: 0 1px 0 0 darken($backgroundColor, 30%)
-    margin-bottom: -1px
 
   &:hover
     text-decoration: none
@@ -105,14 +105,14 @@ button.btn
   padding: 1px 7px 2px 7px
 
   &:active
-    padding-top: 0px
-    padding-bottom: 3px
+    position: relative
+    top: 1px
 
 .btn-primary
-  border-color: $blue
+  border-color: lighten($blue, 7%)
   background-color: lighten(desaturate($blue, 30%), 20%)
   color: #fff
-  box-shadow: 0 2px 0 0 $blue
+  box-shadow: 0 2px 0 0 lighten($blue, 7%)
 
   &:active
-    box-shadow: 0 1px 0 0 $blue
+    box-shadow: 0 1px 0 0 lighten($blue, 7%)
