@@ -37,11 +37,11 @@
  </article>
  ```
 
-article
+.content, article
   max-width: 800px
   width: 70%
-  padding: 5px 50px
-  margin: 20px auto 0 auto
+  padding: 10px 10px 10px 10px
+  margin: 10px auto 10px auto
 
   h1, .article-details
     text-align: center
@@ -50,3 +50,7 @@ article
   .details
     color: $typeLowlight
 
+@media(max-width: 500px)
+  .content, article
+    width: 100%
+    padding: 0 5px 10px 5px

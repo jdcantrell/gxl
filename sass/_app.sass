@@ -116,3 +116,78 @@ button.btn
 
   &:active
     box-shadow: 0 1px 0 0 lighten($blue, 7%)
+
+
+//doc
+ ---
+ title: Touch Table
+ name: touch_Table
+ category: app
+ ---
+
+ This is used for displaying links in a list that can be touched
+ anywhere on a touch device to visit the link
+
+ ```html_example
+ <ul class="touch touch-table">
+   <li>
+     <a>Hello</a>
+     <a>Goodbye</a>
+   </li>
+   <li>
+     <a>Pancakes</a>
+     <a>Waffles</a>
+   </li>
+ </ul>
+
+ <ul class="touch touch-list">
+   <li><a href="http://google.com">Hello</a></li>
+   <li>
+     <a>
+       Goodbye
+       <span>Please come again</span>
+     </a>
+   </li>
+   <li><a>Yar</a></li>
+ </ul>
+ ```
+
+.touch
+  padding: 0
+  margin: 0
+  list-style: none
+  width: 100%
+
+  a
+    font-weight: 300
+    padding: .5em 0
+
+    &:hover
+      background-color: #fff
+      text-decoration: none
+
+    span
+      font-size: 12px
+      display: block
+      color: #333
+      line-height: 1.2em
+ 
+
+.touch-table
+  display: table
+
+  li
+    display: table-row
+
+    & > span
+      display: table-cell
+      vertical-align: middle
+
+  a
+    display: table-cell
+    vertical-align: middle
+
+.touch-list
+  a
+    display: block
+    width: 100%

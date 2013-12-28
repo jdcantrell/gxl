@@ -5,6 +5,9 @@ body
   padding: 0
   margin: 0
 
+  >article, >.content
+    background-color: $backgroundContentColor
+
   >footer
     text-align: center
     margin: 6px
@@ -28,11 +31,9 @@ body
       text-align: center
 
     background-color: $headerBackgroundColor
-    z-index: 1
-    position: fixed
     width: 100%
     top: 0
-    padding: 5px 0 9px 9px
+    padding: 5px 0 9px 0
 
     +background-image(linear-gradient(top, $header1 0%, $header1 33%, $header2 34%, $header2 66%, $header3 67%, $header3 100%))
 
@@ -41,3 +42,13 @@ body
       right: 10px
       top: 2px
 
+@media(max-width: 500px)
+  body
+    >header
+      text-align: center
+      padding: 0
+      ul
+        display: none !important
+      img
+        position: static
+  

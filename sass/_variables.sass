@@ -1,20 +1,20 @@
 //some nice colors
-$springGreen: #a5d7a5
-$seaGreen: #78bc99
-$blueGrey: #398282
-$blue: #0a476a
-
 
 $header1: rgb(120, 188, 153)
 $header2: rgb(93, 160, 142)
 $header3: rgb(57, 130, 130)
+$blue: #1e4967
 
 $grey: #888
 
 $textColor: #222
 $typeLowlight: #444
 
-$backgroundColor: #fafaf7
+$textFadeStart: $header1
+$textFadeEnd: $blue
+
+$backgroundColor: $blue
+$backgroundContentColor: #fafaf7
 
 // needed from stream page mostly
 $listBackground: #fafaf1
@@ -35,7 +35,11 @@ $headerTextColor: #fff
 $linkColor: $blue
 $linkColorVisited: $blue
 
-$codeBackgroundColor: darken($backgroundColor, 5%)
-$codeBorderColor: darken($backgroundColor, 25%)
+$codeBackgroundColor: darken($backgroundContentColor, 5%)
+$codeBorderColor: darken($backgroundContentColor, 25%)
 
-$imgBorderColor: darken($backgroundColor, 25%)
+$blockQuoteBackgroundColor: darken($backgroundContentColor, 5%)
+
+$headingColor: #444
+
+$imgBorderColor: darken($backgroundContentColor, 25%)

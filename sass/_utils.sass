@@ -1,0 +1,45 @@
+
+//doc
+
+ ---
+ title: Fixed
+ name: fixed
+ category: utils
+ ---
+
+ You can use `fixed` to make an element fixed on the page
+
+.fixed
+  z-index: 1
+  position: fixed
+  
+//doc
+
+ ---
+ title: Text Fade
+ name: text-fade
+ category: utils
+ ---
+
+ Sometimes you just want some color
+
+@for $i from 1 through 10
+  li:nth-child(#{$i}) .text-fade
+    color: mix($textFadeStart, $textFadeEnd, 10% * $i)
+
+.hr-fancy
+  border-width: 4px
+  width: 100%
+
+.hr-fancy:nth-of-type(4n+1)
+  border-color: $header1
+
+.hr-fancy:nth-of-type(4n+2)
+  border-color: $header2
+
+.hr-fancy:nth-of-type(4n+3)
+  border-color: $header3
+
+.hr-fancy:nth-of-type(4n)
+  border-color: $blue
+
