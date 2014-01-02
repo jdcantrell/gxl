@@ -80,22 +80,22 @@
  <button class="btn btn-primary">Click me!</button>
  ```
 .btn
-  border: 1px solid darken($backgroundColor, 30%)
-  background-color: darken($backgroundColor, 10%)
+  border: 1px solid darken($btnColor, 30%)
+  background-color: darken($btnColor, 10%)
   border-radius: 4px
   font-size: 18px
   font-family: "Open Sans", Helvetica, Arial, sans-serif
   line-height: 1.4em
   padding: 2px 7px 3px 7px
-  color: $textColor
+  color: $btnTextColor
   display: inline-block
-  box-shadow: 0 2px 0 0 darken($backgroundColor, 30%)
+  box-shadow: 0 2px 0 0 darken($btnColor, 30%)
   cursor: pointer
 
   &:active
     position: relative
     top: 1px
-    box-shadow: 0 1px 0 0 darken($backgroundColor, 30%)
+    box-shadow: 0 1px 0 0 darken($btnColor, 30%)
 
   &:hover
     text-decoration: none
@@ -109,13 +109,13 @@ button.btn
     top: 1px
 
 .btn-primary
-  border-color: lighten($blue, 7%)
-  background-color: lighten(desaturate($blue, 30%), 20%)
-  color: #fff
-  box-shadow: 0 2px 0 0 lighten($blue, 7%)
+  border-color: lighten($btnPrimaryColor, 7%)
+  background-color: lighten(desaturate($btnPrimaryColor, 30%), 20%)
+  color: $btnPrimaryTextColor
+  box-shadow: 0 2px 0 0 lighten($btnPrimaryColor, 7%)
 
   &:active
-    box-shadow: 0 1px 0 0 lighten($blue, 7%)
+    box-shadow: 0 1px 0 0 lighten($btnPrimaryColor, 7%)
 
 
 //doc
@@ -163,13 +163,13 @@ button.btn
     padding: .5em 0
 
     &:hover
-      background-color: #fff
+      background-color: $touchHighlightColor
       text-decoration: none
 
     span
       font-size: 12px
       display: block
-      color: #333
+      color: $touchLowlightTextColor
       line-height: 1.2em
  
 

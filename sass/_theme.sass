@@ -1,22 +1,29 @@
 // This contains the css for the header and footer of the site. These
  rules are more theme related than reusable css.
+
+article, .readable-content
+  background-color: $backgroundContentColor
+  color: $textColor
+
 body
   background-color: $backgroundColor
+  color: $inverseTextColor
   padding: 0
   margin: 0
-
-  >article, >.content
-    background-color: $backgroundContentColor
-
+  
   >footer
     text-align: center
     margin: 6px
     font-size: .9em
 
+    >a, a:visited, a:hover, a:active, a:link
+      color: $header1
+
+
   >header
     &,a, a:visited, a:hover, a:active
       color: $headerTextColor
-      font-size: 1.3em
+      font-size: 1.1em
       text-shadow: rgba(0, 0, 0, .7) 0px 2px 1px 
       font-weight: 300
       outline: 0
@@ -26,6 +33,7 @@ body
 
     a:hover
       text-decoration: none
+      text-shadow: rgba(255, 255, 255, .15) 0px 0px 3px
 
     li
       text-align: center
@@ -33,7 +41,7 @@ body
     background-color: $headerBackgroundColor
     width: 100%
     top: 0
-    padding: 5px 0 9px 0
+    padding: 5px 0 5px 5px
 
     +background-image(linear-gradient(top, $header1 0%, $header1 33%, $header2 34%, $header2 66%, $header3 67%, $header3 100%))
 

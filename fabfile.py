@@ -3,18 +3,17 @@ import json
 import datetime
 
 from fabric.api import *
+from fabric.context_managers import path
 
 env.hosts = ['jd@goodrobot.net']
 
+@task
 def build_min():
-  with settings(warn_only=True):
-    run('bundle exec compass compile --output-style=compressed --force')
+  local('compass compile --output-style=compressed --force')
 
 @task
 def build():
-  with settings(warn_only=True):
-    run('bundle exec compass compile')
-
+  local('/Users/jcantrell/.rbenv/shims/compass compile')
 
 @task
 def deploy():
@@ -24,7 +23,3 @@ def deploy():
   sudo('mv ./gxl.min.css /srv/http/static/gxl/')
   sudo('rm -rf /srv/http/static/gxl/images')
   sudo('mv ./images /srv/http/static/gxl/images')
-
-@task
-def deplay_docs():
-  build()
