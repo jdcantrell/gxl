@@ -8,16 +8,25 @@ from fabric.context_managers import path
 env.hosts = ['jd@goodrobot.net']
 
 @task
-def build_min():
-  local('compass compile --output-style=compressed --force')
+def css_min():
+  local('bundle exec compass compile --output-style=compressed --force')
 
 @task
-def build():
-  local('/Users/jcantrell/.rbenv/shims/compass compile')
+def css():
+  local('bundle exec compass compile')
+
+@task
+def docs():
+  local('bundle exec hologram ./hologram.yml')
+
+@task
+def all():
+  css()
+  docs()
 
 @task
 def deploy():
-  build_min()
+  css_min()
   put('build/gxl.css', '~/gxl.min.css')
   put('images', '~/')
   sudo('mv ./gxl.min.css /srv/http/static/gxl/')
