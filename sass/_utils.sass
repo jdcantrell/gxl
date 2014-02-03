@@ -21,15 +21,52 @@
  category: utils
  ---
 
- Sometimes you just want some color
+ Sometimes you just want some color. Use `text-fade` inside of an `li`.
+ There are ten steps going from dark to light. This isn't super useful,
+ but is a neat effect sometimes.
+
+ ```html_example
+ <ul class="list-inline">
+  <li><h2 class="text-fade">1</h2>
+  <li><h2 class="text-fade">2</h2>
+  <li><h2 class="text-fade">3</h2>
+  <li><h2 class="text-fade">4</h2>
+  <li><h2 class="text-fade">5</h2>
+  <li><h2 class="text-fade">6</h2>
+  <li><h2 class="text-fade">7</h2>
+  <li><h2 class="text-fade">8</h2>
+  <li><h2 class="text-fade">9</h2>
+  <li><h2 class="text-fade">10</h2>
+ </ul>
+ ```
+
 
 @for $i from 1 through 10
   li:nth-child(#{$i}) .text-fade
     color: mix($textFadeStart, $textFadeEnd, 10% * $i)
 
+//doc
+
+ ---
+ title: Borders
+ name: fancy-borders
+ category: utils
+ ---
+
+ Some nifty borders/hrs
+
+ ```html_example
+ <hr class="hr-fancy">
+ <hr class="hr-fancy">
+ <hr class="hr-fancy">
+ ```
+
+ There are three colors that are cycled on the obrders using magic css.
+
 .hr-fancy
   border-width: 0 0 4px 0
   border-style: solid
+  border-color: $header1
   width: 100%
 
 .hr-fancy:nth-of-type(3n+1)
