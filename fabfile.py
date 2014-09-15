@@ -29,6 +29,11 @@ def deploy():
   css_min()
   put('build/gxl.css', '~/gxl.min.css')
   put('images', '~/')
+  put('fonts', '~/')
   sudo('mv ./gxl.min.css /srv/http/static/gxl/')
+
   sudo('rm -rf /srv/http/static/gxl/images')
   sudo('mv ./images /srv/http/static/gxl/images')
+
+  sudo('rm -rf /srv/http/static/gxl/fonts')
+  sudo('mv ./fonts /srv/http/static/gxl/fonts')

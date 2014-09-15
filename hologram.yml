@@ -13,6 +13,7 @@ documentation_assets: ./assets
 dependencies:
   - ./build
   - ./images
+  - ./fonts
 
 # Mark which category should be the index page
 index: layout

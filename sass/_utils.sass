@@ -12,7 +12,7 @@
 .fixed
   z-index: 1
   position: fixed
-  
+
 //doc
 
  ---
@@ -22,7 +22,7 @@
  ---
 
  Sometimes you just want some color. Use `text-fade` inside of an `li`.
- There are ten steps going from dark to light. This isn't super useful,
+ There are ten steps going from dark to light. This is not super useful,
  but is a neat effect sometimes.
 
  ```html_example
@@ -78,3 +78,18 @@
 .hr-fancy:nth-of-type(3n)
   border-color: $header3
 
+
+//doc
+
+ ---
+ title: Clearfix
+ name: clearfix
+ category: utils
+ ---
+
+ You can use `clearfix` to make an element automatically clear its children.
+
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
