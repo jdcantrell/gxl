@@ -1,0 +1,17 @@
+{
+  "name": "gxl",
+  "version": "1.0.0",
+  "description": "A css library of sorts",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass ./mono/mono.sass -o build/css/"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "JD Cantrell",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "node-sass": "^4.5.2"
+  }
+}

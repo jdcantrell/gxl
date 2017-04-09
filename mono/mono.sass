@@ -1,0 +1,65 @@
+// font
+$font-family: Menlo, Consolas, monospace
+html,
+body
+  font-size: 16px
+  font-family: $font-family
+  padding: 0
+  margin: 0
+  color: #333
+
+input
+  @extend body
+
+// layout
+.content
+  width: 700px
+  margin: auto
+// content
+// grid
+// common html elements
+table
+  width: 100%
+thead
+  text-align: left
+// list styles
+ul
+  list-style: none
+
+.list-bullets
+  list-style: disc
+
+
+.list-inline
+  padding: 0
+  margin: 0
+  display: inline-block
+  li
+    display: inline-block
+    margin-right: 5px
+// buttons
+button
+  font-family: $font-family
+  font-size: 16px
+// modals
+.box
+  border-radius: 3px
+  padding: 4px
+  border: 1px solid #ccc
+// forms (at least input=text)
+// toolbars
+.toolbar
+  display: flex
+  border-bottom: 3px solid #0087dd
+  padding: 8px
+  margin: 0 4px 15px
+
+  .toolbar-header
+    display: inline-block
+    font-size: 20px
+    font-weight: bold
+
+//utils
+.txtC
+  text-align: center
+
