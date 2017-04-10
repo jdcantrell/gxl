@@ -3,3 +3,4 @@ build
 docs
 Gemfile.lock
 *.pyc
+node_modules

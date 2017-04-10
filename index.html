@@ -6,73 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./build/css/mono.css" />
   </head>
-  <body>
-    <h1>Welcome to my style guide</h1>
-    <p>
-      Here you will find all the things I generally use to build web
-      pages. This is probably the third or fourth personal style guide
-      I've attempted to make. So really what we're doing is seeing if I
-      can complete it and make it look good.
-    </p>
+  <body class="readable-content">
+    <div class="content">
+      <div>
+        <label for="themeSelect">Theme:</label>
+        <select id="themeSelect">
+          <option value="./build/css/mono.css">Mono</option>
+          <option value="./build/css/gxl.css">Classic</option>
+        </select>
+      </div>
+      <h1>Welcome to my style guide</h1>
+      <p>
+        Here you will find all the things I generally use to build web
+        pages. This is probably the third or fourth personal style guide
+        I've attempted to make. So really what we're doing is seeing if I
+        can complete it and make it look good.
+      </p>
 
-    <h2>Here are some headings that seem important</h2>
-    <h1>&lt;h1&gt; Heading</h1>
-    <h2>&lt;h2&gt; Heading</h2>
-    <h3>&lt;h3&gt; Heading</h3>
+      <h2>Here are some headings that seem important</h2>
+      <h1>&lt;h1&gt; Heading</h1>
+      <h2>&lt;h2&gt; Heading</h2>
+      <h3>&lt;h3&gt; Heading</h3>
 
-    <h2>Lists</h2>
+      <h2>Lists</h2>
 
-    <ul>
-      <li>One
-      <li>Two
-      <li>Three
-    </ul>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
 
-    <ul class='list-bullets'>
-      <li>One
-      <li>Two
-      <li>Three
-    </ul>
+      <ul class="list-bullets">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
 
-    <ul class='list-inline'>
-      <li>One
-      <li>Two
-      <li>Three
-    </ul>
+      <ul class="list-inline">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
 
-    <h2>Buttons</h2>
-    <button>Press me!</button>
-    <button class="btn primary">No Press me!</button>
-    <button class="btn warning">Watch out!</button>
+      <h2>Buttons</h2>
+      <button class="btn" >Press me!</button>
+      <button class="btn btn-primary primary">No Press me!</button>
+      <button class="btn warning">Watch out!</button>
 
-    <h2>Forms</h2>
-    <form action="get">
-      <label for="blammo">Username: </label>
-      <input type="text" placeholder="Type here!" id="blammo" name="blammo">
+      <h2>Forms</h2>
+      <section class="box">
+        <header>
+          Please login
+        </header>
 
-      <label for="pw">Login: </label>
-      <input type="password" placeholder="Type here!" id="pw" name="pw">
+        <form action="get">
+          <section class="box-content">
+            <label for="blammo">Username: </label>
+            <input type="text" placeholder="Type here!" id="blammo" name="blammo">
 
-      <input type="submit" value="Submit">
-    </form>
+            <label for="pw">Login: </label>
+            <input type="password" placeholder="Type here!" id="pw" name="pw">
+          </section>
+          <footer>
+            <input type="submit" value="Submit">
+          </footer>
+        </form>
+      </section>
 
-    <h2>Basics</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Type</th>
-          <th>Dice</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Sword</td>
-          <td>Finesse</td>
-          <td>1d6</td>
-        </tr>
-      </tbody>
-    </table>
+      <h2>Basics</h2>
+      <table class="hover">
+        <thead>
+          <tr><th colspan="3">
+              Git Repository
+            </th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">
+              node_modules
+            </td>
+            <td>Initial commit</td>
+            <td class="align-right collapsing">10 hours ago</td>
+          </tr>
+          <tr>
+            <td>
+              test
+            </td>
+            <td>Initial commit</td>
+            <td class="align-right">10 hours ago</td>
+          </tr>
+          <tr>
+            <td>
+              build
+            </td>
+            <td>Initial commit</td>
+            <td class="align-right">10 hours ago</td>
+          </tr>
+          <tr class="row-highlight">
+            <td>
+              package.json
+            </td>
+            <td>Initial commit</td>
+            <td class="align-right">10 hours ago</td>
+          </tr>
+          <tr>
+            <td>
+              Gruntfile.js
+            </td>
+            <td>Initial commit</td>
+            <td class="align-right">10 hours ago</td>
+          </tr>
+        </tbody>
+      </table>
 
+    </div>
+    <script type="text/javascript">
+      document.getElementById('themeSelect').addEventListener('change', function (event) {
+        document.querySelector('link[rel="stylesheet"]').setAttribute('href', this.value);
+      });
+    </script>
   </body>
 </html>

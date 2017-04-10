@@ -20,6 +20,19 @@ input
 // common html elements
 table
   width: 100%
+  border-spacing: 0
+  border-collapse: separate
+
+  .collapsing
+    width: 1px
+    white-space: nowrap
+
+table.hover tbody>tr:hover, tr.row-highlight
+  background-color: #aaf
+
+td
+  padding: 5px
+
 thead
   text-align: left
 // list styles
@@ -28,7 +41,6 @@ ul
 
 .list-bullets
   list-style: disc
-
 
 .list-inline
   padding: 0
@@ -44,8 +56,19 @@ button
 // modals
 .box
   border-radius: 3px
-  padding: 4px
   border: 1px solid #ccc
+
+  header
+    border-bottom: 1px solid #ccc
+    padding: 20px
+
+  .box-content
+    padding: 20px
+
+  footer
+    padding: 20px
+    border-top: 1px solid #ccc
+    text-align: right
 // forms (at least input=text)
 // toolbars
 .toolbar
@@ -60,6 +83,12 @@ button
     font-weight: bold
 
 //utils
-.txtC
+.align-center
   text-align: center
+
+.align-right
+  text-align: right
+
+.align-left
+  text-align: left
 

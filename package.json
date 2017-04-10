@@ -4,7 +4,9 @@
   "description": "A css library of sorts",
   "main": "index.js",
   "scripts": {
-    "css": "node-sass ./mono/mono.sass -o build/css/"
+    "css": "npm run mono",
+    "mono": "node-sass ./src/mono/mono.sass -o build/css/",
+    "gxl": "node-sass ./src/gxl/sass/gxl.sass --importer ./node_modules/compass-importer/index.js -o build/css/"
   },
   "keywords": [
     "css"
@@ -12,6 +14,7 @@
   "author": "JD Cantrell",
   "license": "GPL-3.0",
   "dependencies": {
+    "compass-importer": "^0.4.1",
     "node-sass": "^4.5.2"
   }
 }
