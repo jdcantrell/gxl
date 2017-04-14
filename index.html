@@ -49,16 +49,45 @@
       </ul>
 
       <h2>Buttons</h2>
-      <button class="btn" >Press me!</button>
-      <button class="btn btn-primary primary">No Press me!</button>
-      <button class="btn warning">Watch out!</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="collapsing">.button or &lt;button&gt;</td>
+            <td>
+              <button class="btn">Action</button>
+            </td>
+          </tr>
+          <tr>
+            <td>.primary</td>
+            <td>
+              <button class="primary btn btn-primary">No actually action</button>
+            </td>
+          </tr>
+          <tr>
+            <td>.warning</td>
+            <td>
+              <button class="warning">Watch out!</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
+      <h3>Button groups</h3>
       <div class="button-group">
-        <button class="btn" >Press me!</button>
-        <button class="btn btn-primary primary">No Press me!</button>
-        <button class="btn warning">Watch out!</button>
-        <button class="btn warning">Watch out!</button>
-        <button class="btn btn-primary primary">No Press me!</button>
+        <button class="btn" >Public</button>
+        <button class="btn" >Limited</button>
+        <button class="btn" >Private</button>
+      </div>
+      <div class="button-group">
+        <button class="btn">Public</button>
+        <button class="btn primary">Limited</button>
+        <button class="btn">Private</button>
       </div>
 
       <h2>Forms</h2>
@@ -76,7 +105,7 @@
             <input type="password" placeholder="Type here!" id="pw" name="pw">
           </section>
           <footer>
-            <input type="submit" value="Submit">
+            <input class="button primary" type="submit" value="Submit">
           </footer>
         </form>
       </section>
