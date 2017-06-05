@@ -156,6 +156,63 @@
         </tbody>
       </table>
 
+      <h2>Flex Layout</h2>
+
+        <h3>.flex-container .row</h3>
+        <div class="flex-container row">
+          <div class="flex-1" style="background-color: #a6dcfe">.flex-1</div>
+          <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+        </div>
+        <br>
+
+        <div class="flex-container row">
+          <div style="background-color: #a6dcfe">start</div>
+          <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+          <div style="background-color: #a6dcfe">end</div>
+        </div>
+        <br>
+
+        <div class="flex-container row">
+          <div class="flex-2" style="background-color: #a6dcfe">.flex-2</div>
+          <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+        </div>
+
+        <h3>.flex-container .column</h3>
+
+        <div class="flex-container row">
+          <div class="flex-1">
+
+            <div class="flex-container column" style="height: 200px">
+              <div class="flex-1" style="background-color: #a6dcfe">.flex-1</div>
+              <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+            </div>
+
+          </div>
+          <div class="flex-1">
+
+            <div class="flex-container column" style="height: 200px">
+              <div style="background-color: #a6dcfe">start</div>
+              <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+              <div style="background-color: #a6dcfe">end</div>
+            </div>
+
+          </div>
+          <div class="flex-1">
+
+            <div class="flex-container column" style="height: 200px">
+              <div class="flex-2" style="background-color: #a6dcfe">.flex-2</div>
+              <div class="flex-1" style="background-color: #dff3ff">.flex-1</div>
+            </div>
+
+          </div>
+        </div>
+
+        <h3>Vertically center</h3>
+        <div class="flex-container column" style="background-color: #a6dcfe; height: 200px">
+          <div style="background-color: #dff2ff">vertically centered</div>
+        </div>
+        <br>
+
     </div>
     <script type="text/javascript">
       document.getElementById('themeSelect').addEventListener('change', function (event) {

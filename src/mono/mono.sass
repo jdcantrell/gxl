@@ -23,6 +23,7 @@ input
   font-family: $font-family
   color: $font-color
 
+
 // layout
 .content
   width: 700px
@@ -45,7 +46,7 @@ table.hover tbody>tr:hover
 tr.row-highlight
   background-color: #a6dcfe
 
-td
+td, th
   padding: $padding-small
 
 thead
@@ -60,7 +61,7 @@ ul
 .list-inline
   padding: 0
   margin: 0
-  display: inline-block
+  display: flex
   li
     display: inline-block
     margin-right: 5px
@@ -136,6 +137,8 @@ button, .button
   border-bottom: 3px solid #0087dd
   padding: 8px
   margin: 0 4px 15px
+  align-items: center
+  justify-content: space-between
 
   .toolbar-header
     display: inline-block
@@ -145,10 +148,48 @@ button, .button
 //utils
 .align-center
   text-align: center
+  justify-content: center
 
 .align-right
   text-align: right
+  justify-content: right
 
 .align-left
   text-align: left
+  justify-content: left
 
+//flex
+.flex-container
+  align-items: center
+  justify-content: center
+  display: flex
+  &.column
+    flex-direction: column
+  &.row
+    flex-direction: row
+
+
+  >.start
+    align-items: center
+    justify-content: flex-start
+    display: flex
+
+  >.end
+    align-items: center
+    justify-content: flex-end
+    display: flex
+
+  >.flex-1
+    flex-basis: auto
+    flex-shrink: 0
+    flex-grow: 1
+
+  >.flex-2
+    flex-basis: auto
+    flex-shrink: 0
+    flex-grow: 2
+
+  >.flex-3
+    flex-basis: auto
+    flex-shrink: 0
+    flex-grow: 3
